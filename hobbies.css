@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.user-img{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 30px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40px;
+    background-color: #12171e;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+}
+.sidebar.active ~ .content{
+    left: 250px;
+    width: calc(100%-250px);
+}
+.sidebar.active{
+    width: 200px;
+}
+.sidebar #btn{
+    position: absolute;
+    color: white;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+.user p{
+    color: white;
+    opacity: 0;
+    margin-left: 1rem;
+    font-weight: 600;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    font-family: "Roboto", sans-serif;
+}
+.sidebar.active .user p{
+    opacity: 1;
+}
+.sidebar ul li{
+    position: relative;
+    left: -45px;
+    top: 30px;
+    list-style-type: none;
+    height: 50px;
+    width: 80px;
+    line-height: 50px;
+}
+.sidebar ul li a{
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    font-family: "Roboto", sans-serif;
+}
+.sidebar ul li a:hover{
+    background: white;
+    color: #12171e;
+    width: 25px;
+    height: 50px;
+    padding-left: 5px;
+}
+.sidebar.active ul li a:hover{
+    background-color: white;
+    color: #12171e;
+}
+.sidebar ul li span{
+    position: relative;
+    left: 5px;
+    font-size: 15px;
+    opacity: 0;
+}
+.sidebar.active ul li span{
+    opacity: 1;
+}
+.sidebar.active ul li a:hover{
+    width: 100%;
+}
+.content{
+    position: relative;
+    left: 80px; 
+    width: 1000px;
+    word-wrap: break-word;
+}
+.content h1{
+    color: #12171e;
+    text-align: center;
+    font-size: 50px;
+    font-family: "PT Sans", sans-serif;
+}
+.main-content{
+    background-color: #1b4580;
+    height: 350px;
+    color: rgb(216, 216, 216);
+    padding: 5px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+}
+.main-content img{
+    width: 200px;
+    border-radius: 100%;
+    position: relative;
+    left: 600px;
+    bottom: 300px;
+}
+@media screen and (max-width: 1040px){
+    body{
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    .content{
+        position: relative;
+        left: 70px;
+    }
+    .content h1{
+        text-align: left;
+    }
+    .main-content{
+        font-size: 15px;
+        width: 40%;
+        height: 410px;
+    }
+    .main-content img{
+        position: relative;
+        left: 50px;
+        top: 0px;
+    }
+}

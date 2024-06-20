@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact_form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="user-img.jpg" alt="me" class="user-img">
+            <div>
+                <p class="bold">KK</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html">
+                  <i class="bx bxs-home"></i> 
+                  <span class="navbar-item">Home</span>
+                </a>
+            </li>
+            <li><a href="projects.html">
+                <i class="bx bxs-folder"></i> 
+                <span class="navbar-item">Projects</span>
+            </a>
+          </li>
+          <li><a href="aboutme.html">
+                <i class="bx bxs-info-circle"></i> 
+                <span class="navbar-item">AboutMe</span>
+              </a>
+          </li>
+          <li><a href="hobbies.html">
+                <i class="bx bx-cool"></i> 
+                <span class="navbar-item">Hobbies</span>
+              </a>
+          </li>
+        </ul>
+    </div>  
+    <div class="content">
+        <form action="myaction.php" name="ContactForm" onsubmit="return validateForm()" method="post">
+            <h3>GET IN TOUCH</h3>
+            <div id="iname">
+            <input type="text" name="fname" id="name" placeholder="Your name..." required><b><span class="formerror"></span></b>
+            </div>
+            <div id="iemail">
+            <input type="email" name="femail" id="email" placeholder="Email Id..." required><b><span class="formerror"></span></b>
+            </div>
+            <div id="iphone">
+            <input type="phone" name="fphone" id="phone" placeholder="Phone No..." required><b><span class="formerror"></span></b>
+            </div>
+            <textarea id="message" rows="4" placeholder="Message..."></textarea>
+            <button type="submit" id="btnform">Send</button>
+        </form>
+    </div>  
+    <script src="contact_form.js"></script>
+</body>
+<script src="sandbox.js"></script>
+</html>
